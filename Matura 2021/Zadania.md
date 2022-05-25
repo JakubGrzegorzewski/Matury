@@ -46,9 +46,11 @@ Podaj napis, który powstanie po wykonaniu wszystkich instrukcji z pliku **instr
 Wodociągi miejskie zamierzają wykonać analizę zużycia wody. W tym celu zgromadziły dane o poborze wody przez wszystkich swoich klientów za rok 2019. Dane są zapisane w pliku **wodociagi.txt**. Pierwszy wiersz pliku jest wierszem nagłówkowym, a dane rozdzielono średnikami. W każdym wierszu zapisano informacje dotyczące gospodarstwa domowego jednego klienta: dziesięcioznakowy kod klienta oraz 12 liczb całkowitych oznaczających ilości zużytej wody w m3 przez kolejnych 12 miesięcy (od stycznia do grudnia). Kod klienta składa się z pięciocyfrowego numeru klienta, dwucyfrowej liczby oznaczającej liczbę osób pozostających we wspólnym gospodarstwie domowym oraz trzyliterowego kodu dzielnicy miasta. Każdy kod jest unikatowy. 
 
 > Fragment pliku **wodociagi.txt**: 
-KodKlienta;I;II;III;IV;V;VI;VII;VIII;IX;X;XI;XII
-0000103WIL;6;6;6;9;6;15;12;12;12;6;9;6
-0000403BEM;6;3;9;9;12;15;15;15;9;6;3;9
+> 
+|KodKlienta|I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|0000103WIL|6|6|6|9|6|15|12|12|12|6|9|6|
+|0000403BEM|6|3|9|9|12|15|15|15|9|6|3|9|
 
 Korzystając z powyższych danych oraz dostępnych narzędzi informatycznych, wykonaj podane zadania. Wyniki zapisz w pliku tekstowym **wyniki5.txt**. Odpowiedź do każdego zadania poprzedź numerem tego zadania.
 
@@ -143,3 +145,7 @@ Jeśli w pewnej lokalizacji znajdują się jednostki więcej niż jednego gracza
 2. w ilu bitwach biorą udział gracze z Polski. 
 
 **Uwaga:** zauważ, że w jednej lokalizacji może się znajdować więcej niż jedna jednostka tego samego gracza.
+
+### WYNIK MA BYĆ ZAPISANY W PLIKU " **wynik6.txt** "
+
+---
