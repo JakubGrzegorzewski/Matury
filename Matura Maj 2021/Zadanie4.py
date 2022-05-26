@@ -47,13 +47,23 @@ def Zadanie2(f):
 
     return " ".join([najCiagInstr[0],str(najCiagInstr[1])])
 
-
+def Zadanie3(f):
+    alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lista = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for i in range(len(f)):
+        if f[i][0] == "DOPISZ":
+            lista[alfabet.index(f[i][1])] += 1
+    return alfabet[lista.index(max(lista))] + " " + str(max(lista))
+ 
 wynik = open("wynik4.txt", "w")
 
 odp1 = "Wynik do zadania 4.1: " + Zadanie1(f)
 odp2 = "Wynik do zadania 4.2: " + Zadanie2(f)
+odp3 = "Wynik do zadania 4.3: " + Zadanie3(f)
 
 wynik.write(odp1)
 wynik.write("\n")
 wynik.write(odp2)
+wynik.write("\n")
+wynik.write(odp3)
 
