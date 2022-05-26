@@ -63,7 +63,7 @@ def Zadanie2(f):
             licznik = 1
     return " ".join([najCiagInstr[0],str(najCiagInstr[1])])
 ```
-> ## Odpowiedz: ZMIEN 7
+> ## Odpowiedz: 517
 ---
 
 # Stworzenie pliku wynik4.txt.
