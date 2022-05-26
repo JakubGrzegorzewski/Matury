@@ -84,6 +84,31 @@ def Zadanie3(f):
 Jako wynik zwraca litere z zmiennej *alfabet* o indeksie, indeksu największej liczby w zmiennej *lista* oraz najwększą liczbę w zmiennej *lista* w formie string
 > ## Odpowiedz: Z 37
 ---
+# Zadanie 4.4
+Pentla for przechodzi przez wszystkie elementy tablicy i sprawdza jakie jest to polecenie.
+* Jeżeli polecenie to **"DOPISZ"** korzystając z wbudowanej funkcji *append* dodaje litere z podaną w **f[i][1]** do tablicy napis
+* Jeżeli polecenie to **"ZMIEN"** ostatnia litera z zmmiennej napis zostaje zmieniona na litere podaną w **f[i][1]**
+* Jeżeli polecenie to **"USUN"** korzystając z wbudowanej funkcji *pop* usuwamy ostatni element tablicy
+* Jeżeli polecenie to **"PRZESUN"** to szukamy w zmiennej napis litery podanej w **f[i][1]** wbudowaną fukcją *index* która wyszukuje pierwszej pasującej litery patrząc od lewej i przypisujemy pozycje do zmiennej *indexNapis*. Na podstawie zmiennej *indexNapis* deklarujemy w zmiennej napis na pozycji *indexNapis* litere po przesunięciu wcześniej zadeklarowaną funkcją *przAlf*
+```python
+def Zadanie1(f):
+    napis = []
+    for i in range(len(f)):
+        if f[i][0] == "DOPISZ":
+            napis.append(f[i][1])
+        if f[i][0] == "ZMIEN":
+            napis[-1] = f[i][1]
+        if f[i][0] == "USUN":
+            napis.pop(-1)
+        if f[i][0] == "PRZESUN":
+            indexNapis = napis.index(f[i][1])
+            napis[indexNapis] = przAlf(f[i][1])
+    return "".join(napis)
+```
+
+Jako wynik zwraca złączony napis funkcją *join* z zmiennej  *napis* w formie string
+> ## Odpowiedz:
+>POZNIEJMOWIONOZECZLOWIEKTENNADSZEDLODPOLNOCYODBRAMYPOWROZNICZEJSZEDLPIESZOAOBJUCZONEGOKONIAPROWADZILZAUZDEBYLOPOZNEPOPOLUDNIEIKRAMYPOWROZNIKOWIRYMARZYBYLYJUZZAMKNIETEAULICZKAPUSTABYLOCIEPLOACZLOWIEKTENMIALNASOBIECZARNYPLASZCZNARZUCONYNARAMIONAZWRACALUWAGEZATRZYMALSIEPRZEDGOSPODASTARYNARAKORTPOSTALCHWILEPOSLUCHALGWARUGLOSOWGOSPODAJAKZWYKLEOTEJPORZEBYLAPELNALUDZINIEZNAJOMYNIEWSZEDLDOSTAREGONARAKORTUPOCIAGNALKONIADALEJWDOLULICZKITAMBYLADRUGAKARCZMAMNIEJSZANAZYWALASIEPODLISEMTUBYLOPUSTOKARCZMANIEMIALANAJLEPSZEJSLAWY
 
 # Stworzenie pliku wynik4.txt.
 Stylowanie odpowiedzi do wypisu.
@@ -93,10 +118,13 @@ wynik = open("wynik4.txt", "w")
 odp1 = "Wynik do zadania 4.1: " + Zadanie1(f)
 odp2 = "Wynik do zadania 4.2: " + Zadanie2(f)
 odp3 = "Wynik do zadania 4.3: " + Zadanie3(f)
+odp4 = "Wynik do zadania 4.4: " + Zadanie4(f)
 
 wynik.write(odp1)
 wynik.write("\n")
 wynik.write(odp2)
 wynik.write("\n")
 wynik.write(odp3)
+wynik.write("\n")
+wynik.write(odp4)
 ```
